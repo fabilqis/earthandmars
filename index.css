@@ -1,0 +1,187 @@
+html {
+    background: url('/asset/Star.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.earth {
+    position: absolute;
+    top: calc(50% - 100px);
+    left: calc(25% - 100px);
+}
+
+.earth img {
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+}
+
+.earth .more-info {
+    background-image: linear-gradient(to bottom, rgba(10, 10, 10, 1), black);
+    border-radius: 1em;
+    color: #fff;
+    opacity: 0;
+    padding: 1em;
+    transform-origin: 0 0;
+    transform: scale(.8);
+    width: 400px;
+}
+
+.earth .more-info h1 {
+    margin: 0 0 1em;
+    text-align: right;
+}
+
+.earth:hover img {
+    transform: translateX(-75px) translateY(-75px)scale(.5);
+}
+
+.earth:hover~.moon-container {
+    transform: translateX(-75px) translateY(-75px) scale(.5);
+}
+
+.earth:hover~.moon-container img {
+    transform: translateX(-140px)translateY(-140px);
+}
+
+.earth:hover .more-info {
+    opacity: 1;
+    transform: none;
+}
+
+.moon-container {
+    position: absolute;
+    top: calc(50% - 25px);
+    left: calc(25% - 25px);
+}
+
+.moon {
+    animation: spin 20s linear infinite;
+    background: none;
+    height: 50px;
+    pointer-events: none;
+    transform-origin: 25px;
+    width: 50px;
+}
+
+.moon img {
+    height: 50px;
+    transform: translateX(-160px) translateY(-160px);
+    width: 50px;
+}
+
+.earth img .moon img {
+    border-radius: 50%;
+    box-shadow: 0 0 12em 1em rgba(110, 140, 200, .6)
+}
+
+@keyframes spin {
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+.earth-demo * {
+    transition: all 4s cubic-bezier(0, 1.5, .3, 1);
+}
+
+.mars {
+    position: absolute;
+    top: calc(50% - 100px);
+    left: calc(75% - 100px);
+}
+
+.mars img {
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+}
+
+.mars .more-info-mars {
+    background-image: linear-gradient(to bottom, rgba(10, 10, 10, 1), black);
+    border-radius: 1em;
+    color: #fff;
+    opacity: 0;
+    padding: 1em;
+    transform-origin: 0 0;
+    transform: scale(.8);
+    width: 400px;
+}
+
+.mars .more-info-mars h1 {
+    margin: 0 0 1em;
+    text-align: right;
+}
+
+.mars:hover img {
+    transform: translateX(-75px) translateY(-75px)scale(.5);
+}
+
+.mars:hover~.phobos-container {
+    transform: translateX(-75px) translateY(-75px) scale(.5);
+}
+
+.mars:hover~.phobos-container img {
+    transform: translateX(-140px)translateY(-140px);
+}
+
+.mars:hover .more-info-mars {
+    opacity: 1;
+    transform: none;
+}
+
+.phobos-container {
+    position: absolute;
+    top: calc(50% - 25px);
+    left: calc(75% - 25px);
+}
+
+.phobos {
+    animation: spins 20s linear infinite;
+    background: none;
+    height: 20px;
+    pointer-events: none;
+    transform-origin: 25px;
+    width: 20px;
+}
+
+.phobos img {
+    height: 50px;
+    transform: translateX(-160px) translateY(-160px);
+    width: 50px;
+}
+
+.mars img .phobos img {
+    border-radius: 50%;
+    box-shadow: 0 0 12em 1em rgba(110, 140, 200, .6)
+}
+
+@keyframes spins {
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+.mars-demo * {
+    transition: all 4s cubic-bezier(0, 1.5, .3, 1);
+}
+
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
